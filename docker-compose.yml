@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "5173:80"
+  postgres-db:
+    image: postgres:15
+    container_name: saam_postgres_db
+    environment:
+      POSTGRES_USER: saamuser
+      POSTGRES_PASSWORD: saampassword
+      POSTGRES_DB: saamdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

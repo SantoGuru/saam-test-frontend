@@ -1,0 +1,402 @@
+/* --- Reset Básico e Variáveis de Cor --- */
+:root {
+  /* Cores */
+  --color-primary: #007bff;
+  --color-primary-dark: #0056b3;
+  --color-background: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #212529;
+  --color-text-muted: #6c757d;
+  --color-border: #dee2e6;
+
+  /* Sombra */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Tipografia */
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+#root {
+  width: 100%;
+  max-width: 900px; /* Aumenta a largura máxima para a HomePage */
+  padding: 1rem;
+}
+
+
+/* --- Estilos para o Container de Formulário (Login/Registro) --- */
+.form-container {
+  background-color: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.form-container h1 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+/* --- Estilos para Inputs --- */
+input {
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder {
+  color: var(--color-text-muted);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* --- Estilos para Botões --- */
+button {
+  border-radius: 4px;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* --- Estilos para a HomePage (Produtos) --- */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.home-header h1 {
+    margin: 0;
+}
+
+.product-section {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.product-section h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Lista de Produtos --- */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+li:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.15);
+}
+
+/* Adicione estas classes ao final do seu index.css */
+
+/* --- Estilos para Botão Secundário --- */
+.button-secondary {
+  background-color: var(--color-text-muted);
+  color: white;
+}
+.button-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* --- Ações do Cabeçalho --- */
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* --- Estilos para Tabela de Produtos --- */
+.table-container {
+  overflow-x: auto; /* Para responsividade em telas pequenas */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+thead {
+  background-color: var(--color-background);
+}
+
+th {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+tbody tr:hover {
+  background-color: var(--color-background);
+}
+
+/* --- Wrapper para conteúdo do Modal --- */
+.modal-content-wrapper {
+  padding: 2rem;
+}
+
+/* Adiciona um espaçamento melhor no formulário dentro do modal */
+.modal-content-wrapper form h3 {
+    margin-top: 0;
+}
+
+/* --- Estilos para Botões de Ação na Tabela --- */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-buttons button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.button-edit {
+  background-color: #ffc107; /* Amarelo */
+  color: var(--color-text);
+}
+.button-edit:hover {
+  background-color: #e0a800;
+}
+
+.button-delete {
+  background-color: #dc3545; /* Vermelho */
+}
+.button-delete:hover {
+  background-color: #c82333;
+}
+
+/* --- Estilos para Modal de Confirmação --- */
+.confirmation-modal h3 {
+  margin-top: 0;
+  color: var(--color-text);
+}
+
+.confirmation-modal p {
+  margin-bottom: 2rem;
+}
+
+.confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* --- Estilos para o Spinner --- */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: var(--color-primary);
+  margin: 2rem auto;
+
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Estilos para o Estado Vazio --- */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--color-background);
+  border-radius: 8px;
+}
+
+.empty-state h3 {
+  margin-top: 0;
+}
+
+.empty-state p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* --- Estilos para o Rodapé dos Formulários --- */
+.form-footer {
+  margin-top: 1.5rem;
+  font-size: 0.9em;
+  color: var(--color-text-muted);
+}
+
+.form-footer a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Estilos para Notificações Toastify (Opcional, mas recomendado) --- */
+.Toastify__toast {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Estilos para o Product Card (Mobile) --- */
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-body .card-description {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+/* --- Lógica de Responsividade com Media Queries --- */
+
+/* Por padrão, escondemos a vista mobile e mostramos a de desktop */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+
+/* Quando o ecrã for 768px ou menor... */
+@media (max-width: 768px) {
+  /* ...escondemos a vista de desktop e mostramos a de mobile */
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+
+  /* Ajustes gerais para mobile */
+  #root {
+    padding: 1rem;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .product-section {
+    padding: 1rem;
+  }
+
+  /* Ajustamos o container de formulários para ocupar mais espaço */
+  .form-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
